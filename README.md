@@ -192,10 +192,11 @@ Contributions welcome! Ideas for improvement:
 
 ## 📄 License
 
-MIT License — free to use, modify, and distribute.
+This project is released under the **MIT License** — see the [`LICENSE`](LICENSE) file. Free to use, modify, and distribute.
 
-The original **DONKEY.BAS** is Copyright © IBM Corp. 1981, 1982.
-This is an independent clean-room reimplementation in Python. No original IBM or Microsoft code is used.
+This is an independent, clean-room reimplementation written from scratch in Python.
+It contains no original DONKEY.BAS code or assets, and it is not affiliated with, sponsored by, or endorsed by IBM or Microsoft.
+Any product names mentioned are used for historical reference only and belong to their respective owners.
 
 ***
 

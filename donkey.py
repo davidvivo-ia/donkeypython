@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
 """
-DONKEY.PY - Remake fiel de DONKEY.BAS (IBM PC DOS 1981)
-Original by Bill Gates & Neil Konzen
-Python remake con Pygame - estilo mentor Python profesional
+DONKEY.PY - Remake en Python de DONKEY.BAS (PC DOS, 1981)
+Inspirado en el juego original de Bill Gates & Neil Konzen.
+Reimplementación independiente ("clean-room") con Pygame.
+No contiene código original ni está afiliado a IBM ni a Microsoft.
+Licencia MIT - ver archivo LICENSE.
 """
 
 from __future__ import annotations
@@ -238,19 +241,19 @@ class Renderer:
             y += dash + gap
 
     def draw_title_screen(self, tick: int) -> None:
-        """Pantalla de título fiel al original IBM PC."""
+        """Pantalla de título inspirada en el original de 1981."""
         self.screen.fill(BLACK)
         cx = SCREEN_W // 2
 
-        # Caja con bordes (estilo IBM box-drawing chars)
+        # Caja con bordes (estilo box-drawing chars de la época)
         bx, by, bw, bh = cx-160, 80, 320, 180
         pygame.draw.rect(self.screen, BGREEN, (bx, by, bw, bh), 3, border_radius=4)
 
-        self.text("IBM",           self.font_big,   BWHITE,  (cx, by+18),    "midtop")
-        self.text("Personal Computer", self.font_med, BWHITE, (cx, by+56),   "midtop")
+        self.text("DONKEY.PY",     self.font_big,   BWHITE,  (cx, by+18),    "midtop")
+        self.text("Python Remake",  self.font_med,   BWHITE,  (cx, by+56),    "midtop")
         self.text("D  O  N  K  E  Y", self.font_big, BYELLOW, (cx, by+90),   "midtop")
         self.text("Version 1.10",  self.font_small, BWHITE,  (cx, by+128),   "midtop")
-        self.text("(C) Copyright IBM Corp 1981,1982", self.font_tiny, WHITE,
+        self.text("Free software - MIT License", self.font_tiny, WHITE,
                   (cx, by+155), "midtop")
 
         # Parpadeo "Press SPACE"
@@ -301,7 +304,7 @@ class DonkeyGame:
     def __init__(self) -> None:
         pygame.init()
         self.screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
-        pygame.display.set_caption("DONKEY.PY  —  IBM PC 1981 Remake")
+        pygame.display.set_caption("DONKEY.PY  —  DONKEY.BAS 1981 Remake")
         self.clock = pygame.time.Clock()
 
         # Sprites
