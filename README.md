@@ -70,7 +70,7 @@ You drive a car down a two-lane road. A donkey randomly appears in one of the la
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/donkey-py.git
+git clone https://github.com/davidvivo-ia/donkey-py.git
 cd donkey-py
 
 # 2. Install dependencies
